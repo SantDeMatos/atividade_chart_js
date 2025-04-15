@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>ChartJS</title>
+</head>
+<body>
+    <div class="container_chart">
+
+        <div class="chart_graph">
+            <canvas id="myChart"></canvas>
+          </div>
+    
+          <div class="chart_graph">
+            <canvas id="myChart2"></canvas>
+          </div>
+    
+          <div class="chart_graph">
+            <canvas id="myChart3"></canvas>
+          </div>
+    
+
+
+    </div>
+   
+    
+</body>
+</html>
+
+
+<script>
+    const ctx = document.getElementById('myChart');
+    const ctx2 = document.getElementById('myChart2');
+    const ctx3 = document.getElementById('myChart3');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['PI', 'BD', 'TI', 'ALG', 'SO', 'ARQ'],
+        datasets: [{
+          label: 'Notas de Avaliações',
+          data: [7, 8, 7.7, 10, 8.7, 8.6],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: ['PI', 'BD', 'TI', 'ALG', 'SO', 'ARQ'],
+        datasets: [{
+          label: 'Notas de Avaliações',
+          data: [7, 8, 7.7, 10, 8.7, 8.6],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    new Chart(ctx3, {
+      type: 'doughnut',
+      data: {
+        labels: ['PI', 'BD', 'TI', 'ALG', 'SO', 'ARQ'],
+        datasets: [{
+          label: 'Quantidade de aulas na semana',
+          data: [5, 5, 3, 7, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+
+ 
+
+  </script>
+   
